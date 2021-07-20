@@ -1,0 +1,276 @@
+<meta charset="UTF-8" xmlns="http://www.w3.org/1999/html">
+<title>Live selfie</title>
+</head>
+<body>
+   <!DOCTYPE html>
+   <html lang="en">
+      <head>
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+         <title>Bootstrap Apply Onboarding Form</title>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <style>
+            * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
+            }
+            nav {
+            min-height: 70px
+            }
+            nav .navbar-brand .logo {
+            padding: 10px 15px;
+            border-radius: 8px
+            }
+            nav .navbar-brand .logo .h2 {
+            margin: 0
+            }
+            nav .navbar-brand .h4 {
+            margin-bottom: 0px;
+            font-weight: 900
+            }
+            nav .navbar-brand .fs-6 {
+            font-size: 0.88rem !important
+            }
+            nav ul li {
+            padding: 0 20px
+            }
+            .navbar-light .navbar-nav .nav-link {
+            color: #333
+            }
+            body {
+            letter-spacing: 0.7px;
+            background-color: #eeee
+            }
+            container {
+            margin-top: 0px;
+            margin-bottom: 0px
+            }
+            .thank-you-pop{
+            width:100%;
+            padding:20px;
+            text-align:center;
+            }
+            .thank-you-pop img{
+            width:76px;
+            height:auto;
+            margin:0 auto;
+            display:block;
+            margin-bottom:25px;
+            }
+            .thank-you-pop h1{
+            font-size: 42px;
+            margin-bottom: 25px;
+            color:#5C5C5C;
+            }
+            .thank-you-pop p{
+            font-size: 20px;
+            margin-bottom: 27px;
+            color:#5C5C5C;
+            }
+            .thank-you-pop h3.cupon-pop{
+            font-size: 25px;
+            margin-bottom: 40px;
+            color:#222;
+            display:inline-block;
+            text-align:center;
+            padding:10px 20px;
+            border:2px dashed #222;
+            clear:both;
+            font-weight:normal;
+            }
+            .thank-you-pop h3.cupon-pop span{
+            color:#03A9F4;
+            }
+            .thank-you-pop a{
+            display: inline-block;
+            margin: 0 auto;
+            padding: 9px 20px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            background-color: #8BC34A;
+            border-radius: 17px;
+            }
+            .thank-you-pop a i{
+            margin-right:5px;
+            color:#fff;
+            }
+            #ignismyModal .modal-header{
+            border:0px;
+            }
+         </style>
+      </head>
+      <body>
+         <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="container">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynav" aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+                  <a class="navbar-brand" href="#">
+                     <div class="d-flex">
+                        <div class="ms-3 d-flex flex-column">
+                           <div class="h4">Digital Customer </div>
+                           <div class="h4">Onboarding</div>
+                        </div>
+                     </div>
+                  </a>
+                  <div class="collapse navbar-collapse" id="mynav">
+                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"> <a class="nav-link" href="#">Apply for onboarding</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/statcheck">View application status</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> <span class="fas fa-user pe-2"></span> log out</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <div class="container mt-4">
+               <div class="row justify-content-center">
+                  <div class="col-md-9">
+                     <div class="card text-center justify-content-center shaodw-lg card-1 border-0 bg-white px-sm-2">
+                        <div class="card-body show ">
+                           <div class="radio-group row justify-content-between px-3 text-center a">
+                              <div class="flex-row">
+                                 <div class="col">
+                                    <div class="pic"> <img class="irc_mut img-fluid" src="https://i.imgur.com/aYGxJSO.png" width="100" href="#ignismyModal" height="100"> </div>
+                                    <p>Please click on button and ensure your Document is completely visible</p>
+                                 </div>
+                              </div>
+                              <div class="mt-4""> <button type="button" class="btn btn-primary" id='open1'>Turn On your Web cam <span class="ml-2"><i  aria-hidden="true"></i></span> </button> </div>
+                              <p class="row justify-content-between">
+                              <p></p>
+                              <p></p>
+                              <p></p>
+                              <p></p>
+                              <p></p>
+                              <p></p>
+                              <div class="col-auto"> <button type="button" class="btn btn-outline-secondary"> <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> Back</button> </div>
+                              <div class="col-auto"> <button type="button" data-toggle="modal" href="#ignismyModal" class="btn btn-primary">Submit </button> </div>
+                              <div class="modal fade" id="ignismyModal" role="dialog">
+                                 <div class="modal-dialog">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                                       </div>
+                                       <div class="modal-body">
+                                          <div class="thank-you-pop">
+                                             <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                                             <h1>Congratulation!</h1>
+                                             <p>Your request has been submitted </p>
+                                             <h3 class="">Thank you</h3>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </header>
+      </body>
+   </html>
+</body>
+<script>
+   $(document).ready(function () {
+   $('.radio-group .radio').click(function () {
+   $('.selected .fa').removeClass('fa-check');
+   $('.radio').removeClass('selected');
+   $(this).addClass('selected');
+   });
+   });
+   
+   $(document).ready(function() {
+     $('#control').hide();
+     $('#video').resize(function(){
+       $('#cont').height($('#video').height());
+         $('#cont').width($('#video').width());
+         $('#control').height($('#video').height()*0.1);
+         $('#control').css('top',$('#video').height()*0.9 );
+           $('#control').width($('#video').width());
+           $('#control').show();
+   });
+   function opencam(){
+     navigator.getUserMedia= navigator.getUserMedia ||   navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia ;
+     if(navigator.getUserMedia)
+     {
+       navigator.getUserMedia({video:true },  streamWebCam ,throwError) ;
+   
+   
+     }
+   
+   
+   
+   
+   
+   
+   
+   }
+   
+   function closecam(){
+   
+     video.pause();
+   
+     try {
+       video.srcObject = null;
+     } catch (error) {
+       video.src =null;
+     }
+   
+     var track = strr.getTracks()[0];  // if only one media track
+     // ...
+     track.stop();
+   
+   }
+     var video= document.getElementById('video');
+     var canvas= document.getElementById('canvas');
+     var context= canvas.getContext('2d');
+     var strr;
+     function streamWebCam(stream){
+     const  mediaSource = new MediaSource(stream);
+     try {
+         video.srcObject = stream;
+       } catch (error) {
+         video.src = URL.createObjectURL(mediaSource);
+       }
+       video.play();
+       strr=stream;
+     }
+     function throwError(e){
+       alert(e.name);
+     }
+   $('#open').click(function(event) {
+     opencam();
+      $('#control').show();
+   });
+   $('#open1').click(function(event) {
+     opencam();
+      $('#control').show();
+   });
+   $('#close').click(function(event) {
+     closecam();
+   });
+     $('#snap').click(function(event) {
+         canvas.width=video.clientWidth;
+         canvas.height=video.clientHeight;
+         context.drawImage(video,0,0);
+         $('#vid').css('z-index','20');
+         $('#capture').css('z-index','30');
+     });
+   $('#retake').click(function(event) {
+   $('#vid').css('z-index','30');
+   $('#capture').css('z-index','20');
+   });
+   });
+</script>
+</html>

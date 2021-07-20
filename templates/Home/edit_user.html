@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <title>Edit Form</title>
+      <style>
+         nav {
+         min-height: 70px
+         }
+         tfoot input {
+         width: 100%;
+         padding: 3px;
+         box-sizing: border-box;
+         }
+         nav .navbar-brand .logo {
+         padding: 10px 15px;
+         border-radius: 8px
+         }
+         nav .navbar-brand .logo .h2 {
+         margin: 0
+         }
+         nav .navbar-brand .h4 {
+         margin-bottom: 0px;
+         font-weight: 900
+         }
+         nav .navbar-brand .fs-6 {
+         font-size: 0.88rem !important
+         }
+         .navbar-light .navbar-nav .nav-link:hover {
+         color: #4e2296
+         }
+         nav ul li {
+         padding: 0 20px
+         }
+         .navbar-light .navbar-nav .nav-link {
+         color: #333
+         }
+         .logo img{
+         float: left;
+         width: 150px;
+         height: auto;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynav" aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+               <a class="navbar-brand" href="#">
+                  <div class="d-flex">
+                     <div class="ms-3 d-flex flex-column">
+                        <div class="h4">Digital Customer </div>
+                        <div class="h4">Onboarding</div>
+                     </div>
+                  </div>
+               </a>
+               <div class="collapse navbar-collapse" id="mynav">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                     <li class="nav-item"> <a class="nav-link" href="{% url 'Owner:updUser' %}">Update Users</a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="{% url 'accounts:homepage' %}"> Log Out</a> </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <form  action="/update/{{st.id}}" id="register" method="POST" >
+         {% csrf_token %}
+         <h2>Edit User</h2>
+         <div class="form-group">
+            <div class="row">
+               <div class="col-xs-6"><input type="text" class="form-control" name="first_name" value="{{st.first_name}}" required="required"></div>
+               <div class="col-xs-6"><input type="text" class="form-control" name="last_name" value="{{st.last_name}}" required="required"></div>
+            </div>
+         </div>
+         <div class="form-group">
+            <input type="email" class="form-control" name="email" value="{{st.email}}" required="required">
+         </div>
+         <div class="form-group">
+            <input type="text" class="form-control" name="role" value="{{rev.role}}" required="required">
+         </div>
+         <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">UPDATE</button>
+         </div>
+      </form>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+   </body>
+</html>
